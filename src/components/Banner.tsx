@@ -1,23 +1,36 @@
 import React from 'react'
+import FancyButton from 'components/FancyButton/FancyButton';
 
 const styles = {
     container: {
-        backgroundColor: '#c9d7d8',
+        backgroundColor: '#e0ebe8',
         textAlign:'center' as 'center',
         minHeight: '50vh',
+        paddingTop: '40px',
     },
-    h1: {
-
+    title: {
+        margin: 0,
+        fontSize: '35px',
+        black: {
+            marginRight: '7px',
+        },
+        green: {
+            color: '#45b29a',
+        }
     }
 
 
 };
 
-export default function Banner({ title, subtitle }: any) {
+export default function Banner({ titleGreen, subtitle, titleBlack }: any) {
     return (
         <div style={styles.container}>
-            <h1 style={styles.h1}>{title}</h1>
+            <h1 style={styles.title}>
+                <span style={styles.title.black}>{titleBlack}</span> 
+                <span style={styles.title.green}>{titleGreen}</span>
+            </h1>
             <p>{subtitle}</p>
+            <FancyButton>View My Work</FancyButton>
         </div>
-    )
+   )
 }

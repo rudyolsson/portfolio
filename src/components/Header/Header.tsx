@@ -1,12 +1,12 @@
 import React from 'react'
 import './Header.scss';
-import avatar from 'assets/images/avatar.png';
+import signature from 'assets/images/signature.png';
 import { Link } from 'react-router-dom';
 
 export default function Header() {
     return (
         <header className="header">
-            <img src={avatar} alt="avatar" className="avatar"/>
+            <img src={signature} alt="signature" className="signature"/>
             <nav className="nav shift">
                 <ul>
                     <li>
