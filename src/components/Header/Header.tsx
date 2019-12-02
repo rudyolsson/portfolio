@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react'
 import './Header.scss';
 import signature from 'assets/images/signature.png';
+import signatureGreen from 'assets/images/signature-green.png';
 import { Link } from 'react-router-dom';
 
 export default function Header() {
     const [activeClass, setActiveClass] = useState();
+    const [activeClassSig, setActiveClassSig] = useState();
     const [scroll, setScroll ] = useState(0);
     const prevScroll = usePrevious(scroll) || 0;
 
@@ -16,21 +18,14 @@ export default function Header() {
 
      useEffect(() => {
          let activeClass = 'header-dark';
+         let activeClassSig = 'show';
          if (scroll > 400) {
             activeClass = 'header-light';
+            activeClassSig = 'hide';
          }
             setActiveClass(activeClass);
+            setActiveClassSig(activeClassSig);
      })
-
-    //  window.addEventListener('scroll', () => {
-    //     let activeClass = 'hide';
-    //     console.log(window.scrollY);
-    //     if (window.scrollY === 0){
-    //         activeClass = '';
-    //     }
-    //     setActiveClass(activeClass);
-    //  });
-
 
     function usePrevious(value: any) {
         const ref = useRef();
@@ -42,7 +37,8 @@ export default function Header() {
 
     return (
         <header className={`header ${activeClass}`}>
-            <img src={signature} alt="signature" className="signature"/>
+            <img src={signature} alt="signature" className={`signature signature-black ${activeClassSig}`}/>
+            <img src={signatureGreen} alt="signature" className={`signature signature-green ${activeClassSig === 'show' ? 'hide' : 'show'}`}/>
             <nav className="nav shift">
                 <ul>
                     <li>
