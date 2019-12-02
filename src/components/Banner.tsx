@@ -5,8 +5,8 @@ const styles = {
     container: {
         backgroundColor: '#e0ebe8',
         textAlign:'center' as 'center',
-        minHeight: '50vh',
-        paddingTop: '40px',
+        height: '350px',
+        paddingTop: '100px',
     },
     title: {
         margin: 0,
