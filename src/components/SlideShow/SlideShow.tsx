@@ -1,5 +1,6 @@
 import React from 'react';
 import './SlideShow.scss';
+import CircleSlide from 'components/CircleSlide/CircleSlide';
 
 export default function SlideShow({tiles}:any) {
     return (
@@ -8,14 +9,7 @@ export default function SlideShow({tiles}:any) {
             <div className="tiles">
                 { tiles.map( (tile: any, i: any) => {
                     return (
-                        <div className="tile" key={i}>
-                            <div className="card front">
-                            <img src={require(`assets/images/${tile.src}`)} alt={tile.name}/>
-                            </div>
-                            {/* <div className="card back">
-                                
-                            </div> */}
-                    </div>
+                        <CircleSlide images={tile} key={i} />
                     )
                 })} 
             </div>

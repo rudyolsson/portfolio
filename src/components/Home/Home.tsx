@@ -45,25 +45,81 @@ export default function Home() {
             </section>
             <section style={styles.section}>
                 <h5 style={styles.titleLarge}>Tech</h5>
-                <SlideShow tiles={[
-                    {
-                        src: 'angular.png',
-                        name: 'Angular'
-                    },
-                    {
-                        src: 'css.png',
-                        name: 'CSS'
-                    },
-                    {
-                        src: 'mobx.png',
-                        name: 'Mobx',
-                    },
-                    {
-                        src: 'nodejs.png',
-                        name: 'NodeJS'
-                    }
-                ]}/>
+                <SlideShow tiles={imageGroups}/>
+                <p>Here are some technologies I've worked with both in production and on personal projects.</p>
+            </section>
+            <section style={styles.section}>
+                <h5 style={styles.titleLarge}></h5>
             </section>
         </>
     )
 }
+
+const imageGroups = [
+    [{
+        src: 'react.png',
+        name: 'ReactJS'
+    },
+    {
+        src: 'angular.png',
+        name: 'Angular'
+        
+    },
+    {
+        src: 'nodejs.png',
+        name: 'NodeJS',
+    },
+    {
+        src: 'html.png',
+        name: 'HTML'
+    },
+    {
+        src: 'css.png',
+        name: 'CSS'
+    }],
+    [{
+        src: 'redux.png',
+        name: 'Redux'
+    },
+    {
+        src: 'ngrx.png',
+        name: 'NgRx'
+    },
+    {
+        src: 'mobx.png',
+        name: 'Mobx',
+    },
+    {
+        src: 'nestjs.png',
+        name: 'NestJS'
+    },
+    {
+        src: 'mobx.png',
+        name: 'MobX'
+    }],
+    [{
+        src: 'javascript.png',
+        name: 'JavaScript'
+        
+    },
+    {
+        src: 'typescript.png',
+        name: 'TypeScript'
+    },
+    {
+        src: 'sass.png',
+        name: 'Sass',
+    },
+    {
+        src: 'postgres.png',
+        name: 'PostgreSQL'
+    },
+    {
+        src: 'docker.png',
+        name: 'Docker'
+    },
+    {
+        src: 'mongo.png',
+        name: 'MongoDB'
+    }], 
+];
