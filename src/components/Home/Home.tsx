@@ -1,6 +1,7 @@
 import React from 'react'
 import Banner from 'components/Banner'
 import avatar from 'assets/images/avatar.png';
+import SlideShow from 'components/SlideShow/SlideShow';
 
 export default function Home() {
     const styles = {
@@ -43,7 +44,25 @@ export default function Home() {
                 <p style={styles.paragraph}>I am a Canadian Expat and full-stack JavaScript developer with a passion for creating great user experiences. I bring with me a sincere drive and ability to learn on-the-fly; I love a challenge.</p>
             </section>
             <section style={styles.section}>
-                <h5 style={styles.titleLarge}>About</h5>
+                <h5 style={styles.titleLarge}>Tech</h5>
+                <SlideShow tiles={[
+                    {
+                        src: 'angular.png',
+                        name: 'Angular'
+                    },
+                    {
+                        src: 'css.png',
+                        name: 'CSS'
+                    },
+                    {
+                        src: 'mobx.png',
+                        name: 'Mobx',
+                    },
+                    {
+                        src: 'nodejs.png',
+                        name: 'NodeJS'
+                    }
+                ]}/>
             </section>
         </>
     )

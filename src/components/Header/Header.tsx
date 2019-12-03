@@ -19,7 +19,7 @@ export default function Header() {
      useEffect(() => {
          let activeClass = 'header-dark';
          let activeClassSig = 'show';
-         if (scroll > 400) {
+         if (scroll > 415) {
             activeClass = 'header-light';
             activeClassSig = 'hide';
          }
