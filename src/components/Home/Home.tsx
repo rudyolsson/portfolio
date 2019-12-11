@@ -2,6 +2,8 @@ import React from 'react'
 import Banner from 'components/Banner'
 import avatar from 'assets/images/avatar.png';
 import SlideShow from 'components/SlideShow/SlideShow';
+import FancyButton from 'components/FancyButton/FancyButton';
+import { MdMail } from 'react-icons/md';
 
 export default function Home() {
     const styles = {
@@ -36,7 +38,7 @@ export default function Home() {
     return (
         <>
             <section style={{"paddingTop": "60px"}}>
-                <Banner titleBlack="Hi, I'm" titleGreen="Rudy Olsson" subtitle="Web Developer"></Banner>
+                <Banner titleBlack="Hi, I'm" titleGreen="Rudy Olsson" subtitle="Web Developer" btnText="View My Work"></Banner>
             </section>
             <section style={styles.section}>
                 <img src={avatar} alt="avatar" style={styles.avatar}/>
@@ -50,6 +52,7 @@ export default function Home() {
             </section>
             <section style={styles.section}>
                 <h5 style={styles.titleLarge}></h5>
+                <FancyButton><MdMail/> Message Me</FancyButton>
             </section>
         </>
     )

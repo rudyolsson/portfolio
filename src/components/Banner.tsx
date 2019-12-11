@@ -29,18 +29,15 @@ const styles = {
     }
 };
 
-export default function Banner({ titleGreen, subtitle, titleBlack }: any) {
+export default function Banner({ titleGreen, subtitle, titleBlack, btnText }: any) {
     return (
-        <>
         <div style={styles.container}>
             <h1 style={styles.title}>
                 <span style={styles.title.black}>{titleBlack}</span> 
                 <span style={styles.title.green}>{titleGreen}</span>
             </h1>
             <p style={styles.subtitle}>{subtitle}</p>
-            <FancyButton>View My Work</FancyButton>
+            <FancyButton>{btnText}</FancyButton>
         </div>
-    
-      </>
    )
 }

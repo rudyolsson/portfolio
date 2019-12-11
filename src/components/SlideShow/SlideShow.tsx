@@ -1,19 +1,29 @@
 import React from 'react';
-import './SlideShow.scss';
 import CircleSlide from 'components/CircleSlide/CircleSlide';
+import ScrollAnimation from 'react-animate-on-scroll';
+import styled from 'styled-components';
+
+const StyledDiv = styled.div`
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 730px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+`;
 
 export default function SlideShow({tiles}:any) {
     return (
-        <div style={{"position": "relative"}}>
-
-            <div className="tiles">
+            <StyledDiv>
                 { tiles.map( (tile: any, i: any) => {
                     return (
-                        <CircleSlide images={tile} key={i} />
+                            <ScrollAnimation animateIn="fadeInUp" delay={i * 200} key={i}>
+                                <CircleSlide images={tile} key={i} />
+                            </ScrollAnimation>
                     )
                 })} 
-            </div>
-        </div>
-
+            </StyledDiv>
     )
 }
