@@ -11,7 +11,7 @@ const StyledDiv = styled.div`
   max-width: 730px;
   position: relative;
   overflow: hidden;
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
 `;
 
 export default function SlideShow({tiles}:any) {
@@ -19,7 +19,7 @@ export default function SlideShow({tiles}:any) {
             <StyledDiv>
                 { tiles.map( (tile: any, i: any) => {
                     return (
-                            <ScrollAnimation animateIn="fadeInUp" delay={i * 200} key={i}>
+                            <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={i * 200} key={i}>
                                 <CircleSlide images={tile} key={i} />
                             </ScrollAnimation>
                     )

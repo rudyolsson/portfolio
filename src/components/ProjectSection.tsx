@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 
 const Wrapper = styled.section`
-    padding: 50px 30px 30px 30px;
+    padding: 70px 30px;
     text-align: center;
     align-items: center;
     background-color: ${props => props.bgColor};
@@ -13,8 +13,12 @@ const ScreenShot = styled.img.attrs({
     src: props => props.src
 })`
     border-radius: 5px;
-    max-height: 600px;
-    max-width: 550px;
+    max-height: 400px;
+    max-width: 350px;
+    @media (min-width: 768px) {
+        max-height: 600px;
+        max-width: 550px;
+  }
 `;
 
 const Title = styled.h1`
@@ -38,7 +42,7 @@ const Link = styled.a`
     background: #2b3d51;
     padding: 10px 20px;
     border-radius: 5px;
-    margin: 50px auto;
+    margin: 50px auto 0 auto;
     display: block;
     max-width: 300px;
     text-transform: uppercase;

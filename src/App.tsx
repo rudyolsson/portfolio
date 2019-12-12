@@ -2,8 +2,8 @@ import React from 'react';
 import './App.css';
 import Header from 'components/Header/Header';
 import { Switch, Route } from 'react-router-dom';
-import WorkLayout from 'components/WorkLayout/WorkLayout';
-import Home from 'components/Home/Home';
+import WorkLayout from 'components/WorkLayout';
+import Home from 'components/Home';
 import Footer from 'components/Footer';
 
 const App: React.FC = () => {

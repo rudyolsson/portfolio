@@ -30,8 +30,13 @@ const NavItem = styled.li`
     }
 `;
 
-const CopyRight = styled.p`
+const Paragraph = styled.p`
     text-align: center;
+    margin: 0 auto;
+`;
+
+const ParagraphSmall = styled(Paragraph)`
+    font-size: 0.5em;
 `;
 
 
@@ -55,7 +60,10 @@ export default function Footer() {
                     </a>
                 </NavItem>
             </FooterNav>
-    <CopyRight>&#169; {new Date().getFullYear()} Rudy Olsson</CopyRight>
+            <div>
+                <Paragraph>&#169; {new Date().getFullYear()} Rudy Olsson</Paragraph>
+                <ParagraphSmall>Site Made With ReactJS</ParagraphSmall>
+            </div>
         </Wrapper>
     )
 }
