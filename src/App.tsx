@@ -10,10 +10,12 @@ const App: React.FC = () => {
   return (
     <>
       <Header/>
-      <Switch>
+      {/* <Switch>
         <Route path="/" component={Home} exact/>
         <Route path="/work" component={WorkLayout} exact/>
-      </Switch>
+      </Switch> */}
+      <Home/>
+      <WorkLayout/>
       <Footer />
     </>
   );

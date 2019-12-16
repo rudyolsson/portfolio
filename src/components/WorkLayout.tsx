@@ -5,13 +5,59 @@ import UmatchImg from 'assets/images/umatch-three-screens.png';
 import FlexoImg from 'assets/images/flexo-three-screens.png';
 import TokenUIImg from 'assets/images/token-admin-ui.png';
 import Banner from 'components/Banner';
+import styled from 'styled-components';
+import avatar from 'assets/images/avatar.png';
+import FadeInUp from './FadeInUp';
+import FancyButton from 'components/FancyButton/FancyButton';
+import { MdMail } from 'react-icons/md';
+import ScrollDownIcon from './ScrollDownIcon';
 
 export default function WorkLayout() {
     const backgroundColors: string[] = ['#7dcc93', '#f76160', '#31355b', '#f8c687', '#21364b'];
+    const Section = styled.section`
+        padding: 30px 60px;
+        text-align: center;
+        position: relative;
+    `;
+    const Avatar = styled.img`
+        height: 150px;
+        background-color: #f5f5f5;
+        border-radius: 50%;
+        padding: 5px;
+    `;
+     const Paragraph = styled.p`
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 2em;
+ `;
+
+    const TitleSmall = styled.h5`
+        font-size: 2em;
+        color: #45b29a;
+        margin: 20px auto;
+    `;
+
+    const TitleLarge = styled.h1`
+        font-size: 3em;
+        color: #1e836c;
+        margin: 20px auto;
+    `;
+
+    const Anchor = styled.a`
+
+    `;
+
 
     return (
         <>
-            <Banner titleGreen="Work"></Banner>
+            {/* <Banner titleGreen="Work"></Banner> */}
+            <Section>
+                {/* <Avatar src={avatar} alt="avatar"/> */}
+                <TitleSmall>What I've worked on recently</TitleSmall>
+                <FadeInUp component={<Paragraph>Here are some projects that I have worked on recently. For more information visit the sites, or to see what personal projects I've been working on check out my <Anchor href="https://github.com/rudyolsson">GitHub.</Anchor></Paragraph>}/>
+            </Section>
+            <ScrollDownIcon />
+
             { projects.map((project, i) => {
                 return (
                     <ProjectSection project={{
@@ -22,6 +68,11 @@ export default function WorkLayout() {
                     />
                 )
             })}
+            <Section>
+                <TitleLarge>Let's Chat</TitleLarge>
+                <FadeInUp component={<FancyButton><MdMail/> Message Me</FancyButton>}/>
+            </Section>
+            
         </>
     )
 }
@@ -47,7 +98,7 @@ const projects = [
     },
     {
         imgURL: FlexoImg,
-        title: "Project Management Platform (FlexoBot)",
+        title: "Project Management Platform",
         description: "An internal platform and API to manage projects. Highly integrated with the GitLab API in order to create and monitor milestones, issues, and commits. Integration with Slack to collect daily project management. Connected to Google Spreadsheets for transforming client quotes to Agile project breakdowns in GitLab.",
         frontEnd: "Front End: Angular 8, MobX, RxJs",
         backEnd: "Back End: ExpressJS, PostgreSQL, Docker",

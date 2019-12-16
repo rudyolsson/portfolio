@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
+import FadeInUp from './FadeInUp';
 
 const Wrapper = styled.div`
     padding: 30px;
@@ -42,28 +43,42 @@ const ParagraphSmall = styled(Paragraph)`
 
 export default function Footer() {
     return (
+        <FadeInUp  component={ 
         <Wrapper>
             <FooterNav>
-                <NavItem>
-                    <a href="https://www.linkedin.com/in/rudy-olsson-bb2152161/" target="_blank">                        
-                        <FaLinkedin/>
-                    </a>
-                </NavItem>
-                <NavItem>
-                    <a href="https://github.com/rudyolsson" target="_blank">                        
-                        <FaGithub/>
-                    </a>
-                </NavItem>
-                <NavItem>
-                    <a href="mailto:rudy@gmail.com" target="_blank">                        
-                        <MdEmail/>
-                    </a>
-                </NavItem>
+                <FadeInUp  
+                delay={200}
+                component={ 
+                    <NavItem>
+                        <a href="https://www.linkedin.com/in/rudy-olsson-bb2152161/" target="_blank">                        
+                            <FaLinkedin/>
+                        </a>
+                    </NavItem>
+                }/>
+                <FadeInUp  
+                delay={400}
+                component={ 
+                    <NavItem>
+                        <a href="https://github.com/rudyolsson" target="_blank">                        
+                            <FaGithub/>
+                        </a>
+                    </NavItem>
+                }/>
+                <FadeInUp  
+                delay={600}
+                component={ 
+                    <NavItem>
+                        <a href="mailto:rudy@gmail.com" target="_blank">                        
+                            <MdEmail/>
+                        </a>
+                    </NavItem>
+                }/>
             </FooterNav>
             <div>
                 <Paragraph>&#169; {new Date().getFullYear()} Rudy Olsson</Paragraph>
                 <ParagraphSmall>Site Made With ReactJS</ParagraphSmall>
             </div>
         </Wrapper>
+        }/>
     )
 }

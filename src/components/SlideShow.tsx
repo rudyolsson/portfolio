@@ -19,7 +19,7 @@ export default function SlideShow({tiles}:any) {
             <StyledDiv>
                 { tiles.map( (tile: any, i: any) => {
                     return (
-                            <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={i * 200} key={i}>
+                            <ScrollAnimation animateIn="fadeInUp" offset={50} animateOnce={true} delay={i * 200} key={i}>
                                 <CircleSlide images={tile} key={i} />
                             </ScrollAnimation>
                     )

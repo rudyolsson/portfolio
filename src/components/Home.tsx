@@ -10,12 +10,14 @@ import FadeInUp from './FadeInUp';
 
 export default function Home() {
     const Section = styled.section`
-            padding: 60px;
-            text-align: center;
+        padding: 30px 60px;
+        text-align: center;
+
     `;
 
     const SectionTop = styled.section`
         padding-top: 60px;
+        padding-bottom: 30px;
         text-align: center;
         `;
 
@@ -64,10 +66,10 @@ export default function Home() {
                 <SlideShow tiles={imageGroups}/>
                 <FadeInUp delay={500} component={ <Paragraph>Here are some technologies I've worked with both in production and on personal projects.</Paragraph>}/>
             </Section>
-            <Section>
+            {/* <Section>
                 <TitleLarge></TitleLarge>
                 <FadeInUp component={<FancyButton><MdMail/> Message Me</FancyButton>}/>
-            </Section>
+            </Section> */}
         </>
     )
 }
