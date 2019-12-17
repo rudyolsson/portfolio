@@ -10,7 +10,7 @@ export default function ScrollDownIcon() {
 
         to {
             opacity: 0;
-            transform: translateY(46px);
+            transform: translateY(20px);
         }
     `;
 
@@ -28,7 +28,7 @@ export default function ScrollDownIcon() {
         }
         width: 25px;
         height: 40px;
-        margin-left: -20px;
+        margin-left: -13px;
         top: 50%;
         margin-top: -35px;
         box-shadow: inset 0 0 0 1px #45b29a;

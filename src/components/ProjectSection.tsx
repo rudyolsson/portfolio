@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
+import FadeInUp from 'components/FadeInUp';
 
 const Wrapper = styled.section`
     padding: 70px 30px;
@@ -55,12 +56,23 @@ export default function ProjectSection({project}) {
     const { imgURL, bgColor, title, description, frontEnd, backEnd, siteURL, hideLink } = project;
     return (
         <Wrapper bgColor={bgColor}>
+            <FadeInUp component={
             <ScreenShot src={imgURL}/>
+            }/>
+            <FadeInUp component={
             <Title>{title}</Title>
+        }/>
+            <FadeInUp component={
             <Paragraph>{description}</Paragraph>
+        }/>
+            <FadeInUp component={
             <Tech>{frontEnd}</Tech>
+        }/>
+            <FadeInUp component={
             <Tech>{backEnd}</Tech>
-            { hideLink || !siteURL ? '' : <Link href={siteURL} target="_blank">Visit Site</Link>}
+        }/>
+            { hideLink || !siteURL ? '' : <FadeInUp component={
+<Link href={siteURL} target="_blank">Visit Site</Link>}/>}
         </Wrapper>
     )
 }

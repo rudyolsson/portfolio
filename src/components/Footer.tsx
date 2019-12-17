@@ -31,6 +31,30 @@ const NavItem = styled.li`
     }
 `;
 
+const Anchor = styled.a`
+    text-decoration: none;
+    position: relative;
+    color: inherit;
+  
+  &::after {
+    position: absolute;
+    content: "";
+    height: .1em;
+    top: 100%;
+    background: currentColor;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    transform: scaleX(0);
+    transition: transform .5s cubic-bezier(.95, .05, .795, .035);
+   }
+  
+   &:hover::after {
+    transition-timing-function: cubic-bezier(.19, 1, .22, 1);  
+    transform: scaleX(1);
+   }
+`;
+
 const Paragraph = styled.p`
     text-align: center;
     margin: 0 auto;
@@ -50,27 +74,27 @@ export default function Footer() {
                 delay={200}
                 component={ 
                     <NavItem>
-                        <a href="https://www.linkedin.com/in/rudy-olsson-bb2152161/" target="_blank">                        
+                        <Anchor href="https://www.linkedin.com/in/rudy-olsson-bb2152161/" target="_blank">                        
                             <FaLinkedin/>
-                        </a>
+                        </Anchor>
                     </NavItem>
                 }/>
                 <FadeInUp  
                 delay={400}
                 component={ 
                     <NavItem>
-                        <a href="https://github.com/rudyolsson" target="_blank">                        
+                        <Anchor href="https://github.com/rudyolsson" target="_blank">                        
                             <FaGithub/>
-                        </a>
+                        </Anchor>
                     </NavItem>
                 }/>
                 <FadeInUp  
                 delay={600}
                 component={ 
                     <NavItem>
-                        <a href="mailto:rudy@gmail.com" target="_blank">                        
+                        <Anchor href="mailto:rudy@gmail.com" target="_blank">                        
                             <MdEmail/>
-                        </a>
+                        </Anchor>
                     </NavItem>
                 }/>
             </FooterNav>

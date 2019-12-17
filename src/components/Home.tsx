@@ -2,17 +2,13 @@ import React from 'react'
 import Banner from 'components/Banner'
 import avatar from 'assets/images/avatar.png';
 import SlideShow from 'components/SlideShow';
-import FancyButton from 'components/FancyButton/FancyButton';
-import { MdMail } from 'react-icons/md';
 import styled from 'styled-components';
-import ScrollAnimation from 'react-animate-on-scroll';
 import FadeInUp from './FadeInUp';
 
 export default function Home() {
     const Section = styled.section`
         padding: 30px 60px;
         text-align: center;
-
     `;
 
     const SectionTop = styled.section`
@@ -66,10 +62,6 @@ export default function Home() {
                 <SlideShow tiles={imageGroups}/>
                 <FadeInUp delay={500} component={ <Paragraph>Here are some technologies I've worked with both in production and on personal projects.</Paragraph>}/>
             </Section>
-            {/* <Section>
-                <TitleLarge></TitleLarge>
-                <FadeInUp component={<FancyButton><MdMail/> Message Me</FancyButton>}/>
-            </Section> */}
         </>
     )
 }

@@ -4,10 +4,8 @@ import ArtysImg from 'assets/images/artys-screens.png';
 import UmatchImg from 'assets/images/umatch-three-screens.png';
 import FlexoImg from 'assets/images/flexo-three-screens.png';
 import TokenUIImg from 'assets/images/token-admin-ui.png';
-import Banner from 'components/Banner';
 import styled from 'styled-components';
-import avatar from 'assets/images/avatar.png';
-import FadeInUp from './FadeInUp';
+import FadeInUp from 'components/FadeInUp';
 import FancyButton from 'components/FancyButton/FancyButton';
 import { MdMail } from 'react-icons/md';
 import ScrollDownIcon from './ScrollDownIcon';
@@ -19,6 +17,7 @@ export default function WorkLayout() {
         text-align: center;
         position: relative;
     `;
+
     const Avatar = styled.img`
         height: 150px;
         background-color: #f5f5f5;
@@ -44,7 +43,7 @@ export default function WorkLayout() {
     `;
 
     const Anchor = styled.a`
-
+        text-decoration: none;
     `;
 
 
@@ -52,8 +51,7 @@ export default function WorkLayout() {
         <>
             {/* <Banner titleGreen="Work"></Banner> */}
             <Section>
-                {/* <Avatar src={avatar} alt="avatar"/> */}
-                <TitleSmall>What I've worked on recently</TitleSmall>
+                <FadeInUp component={ <TitleSmall>What I've worked on recently</TitleSmall>}/>
                 <FadeInUp component={<Paragraph>Here are some projects that I have worked on recently. For more information visit the sites, or to see what personal projects I've been working on check out my <Anchor href="https://github.com/rudyolsson">GitHub.</Anchor></Paragraph>}/>
             </Section>
             <ScrollDownIcon />
@@ -70,7 +68,8 @@ export default function WorkLayout() {
             })}
             <Section>
                 <TitleLarge>Let's Chat</TitleLarge>
-                <FadeInUp component={<FancyButton><MdMail/> Message Me</FancyButton>}/>
+                <FadeInUp component={<Anchor href="mailto:rudy@gmail.com"><FancyButton><MdMail/> Message Me</FancyButton></Anchor>}/>
+                <FadeInUp component={<Paragraph>If you are interested if working together or just fancy saying hey, reach out.</Paragraph>}/>
             </Section>
             
         </>

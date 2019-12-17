@@ -58,27 +58,3 @@ nav ul {
     text-transform: uppercase;
     margin: 0 10px;
   }
-  
-  a {
-    text-decoration: none;
-    position: relative;
-    color: inherit;
-  }
-  
-  a::after {
-    position: absolute;
-    content: "";
-    height: .1em;
-    top: 100%;
-    background: currentColor;
-    z-index: -1;
-    left: 0;
-    right: 0;
-    transform: scaleX(0);
-    transition: transform .5s cubic-bezier(.95, .05, .795, .035);
-  }
-  
-  a:hover::after {
-    transition-timing-function: cubic-bezier(.19, 1, .22, 1);  
-    transform: scaleX(1);
-  }
