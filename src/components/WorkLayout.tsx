@@ -43,7 +43,7 @@ export default function WorkLayout() {
                 <SlideShow tiles={imageGroups}/>
                 <FadeInUp component={<Paragraph>Here are some projects that I have worked on recently. For more information visit the sites, or to see what personal projects I've been working on check out my <Anchor href="https://github.com/rudyolsson">GitHub.</Anchor></Paragraph>}/>
             </Section>
-            <ScrollDownIcon />
+            <FadeInUp component={<ScrollDownIcon />}/>
 
             { projects.map((project, i) => {
                 return (
