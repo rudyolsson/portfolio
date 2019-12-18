@@ -67,7 +67,7 @@ const StyledHeader = styled.header`
 `;
 
 const Signature = styled.img`
-    height: 50px;
+    height: 35px;
     transition: all .5s;
     cursor: pointer;
     &-green {
@@ -78,13 +78,19 @@ const Signature = styled.img`
     &-black {
       opacity: 1;
     }
+    @media(min-width: 450px) {
+      height: 50px;
+    }
 `;
 
 const NavUL = styled.ul`
     list-style: none;
     text-align: center;
-    margin: 10px 50px 0 0;
+    margin: 10px 20px 0 0;
     display: flex;
+    @media(min-width: 450px) {
+      margin: 10px 50px 0 0;
+    }
 `;
 
 const Anchor = styled.span`
@@ -94,7 +100,7 @@ const Anchor = styled.span`
     color: $dark-green;
     font-weight: 800;
     text-transform: uppercase;
-    margin: 0 10px;
+    margin: 0 5px;;
     text-decoration: none;
     position: relative;
     color: inherit;
@@ -110,6 +116,9 @@ const Anchor = styled.span`
     right: 0;
     transform: scaleX(0);
     transition: transform .5s cubic-bezier(.95, .05, .795, .035);
+    @media(min-width: 450px) {
+      margin: 0 10px;
+    }
   }
   
   &:hover::after {

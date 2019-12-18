@@ -16,8 +16,12 @@ const ScreenShot = styled.img.attrs({
     src: props => props.src
 })`
     border-radius: 5px;
-    max-height: 400px;
-    max-width: 350px;
+    max-height: 200px;
+    max-width: 300px;
+    @media (min-width: 450px) {
+        max-height: 400px;
+        max-width: 350px;
+  }
     @media (min-width: 768px) {
         max-height: 600px;
         max-width: 550px;
@@ -26,7 +30,10 @@ const ScreenShot = styled.img.attrs({
 
 const Title = styled.h1`
     font-weight: bold;
-    font-size: 2em;
+    font-size: 1.7em;
+    @media (min-width: 567px) {
+        font-size: 2em;
+    }
 `;
 
 const Paragraph = styled.p`

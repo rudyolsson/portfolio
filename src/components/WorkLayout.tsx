@@ -26,9 +26,12 @@ export default function WorkLayout() {
  `;
 
     const TitleLarge = styled.h1`
-        font-size: 3em;
+        font-size: 2em;
         color: #1e836c;
         margin: 20px auto;
+        @media (min-width: 768px) {
+        font-size: 3em;
+  }
     `;
 
     const Anchor = styled.a`

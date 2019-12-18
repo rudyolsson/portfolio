@@ -42,8 +42,11 @@ export default function Home() {
     const Flag = styled.img`
         height: 52px;
         position: absolute;
-        left: 100px;
+        left: 50px;
         top: 204px;
+        @media(min-width: 450px) {
+            left: 100px;
+        }
     `;
 
     return (
