@@ -23,7 +23,7 @@ export default function Header() {
          let activeClass = 'header-dark';
          let activeClassSig = 'show';
          if (scroll > 415) {
-            activeClass = 'header-light two';
+            activeClass = 'header-light forest';
             activeClassSig = 'hide';
          }
             setActiveClass(activeClass);
@@ -98,6 +98,7 @@ const Anchor = styled.span`
     text-decoration: none;
     position: relative;
     color: inherit;
+    /* font-size: 0.6em; */
     &::after {
     position: absolute;
     content: "";

@@ -10,11 +10,7 @@ code {
     monospace;
 }
 
-
-section.one {
-}
-
-section.two {
+section.forest {
   // background-color: #39493c;
   position: relative;
   padding-top: 175px;
@@ -56,7 +52,7 @@ section.two {
 }
 
 @media (min-width: 450px) {
-  section.two {
+  section.forest {
     background-position:
       /* Gradient */
       0 252px,
@@ -76,7 +72,7 @@ section.two {
 }
 
 @media (min-width: 700px) {
-  section.two {
+  section.forest {
 
     background-position:
       /* Gradient */

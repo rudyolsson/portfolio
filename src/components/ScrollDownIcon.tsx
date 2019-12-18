@@ -16,7 +16,7 @@ export default function ScrollDownIcon() {
 
     const Wrapper = styled.div`
         position: relative;
-        margin: 10px auto;
+        margin: 0 auto;
         height: 70px;
     `;
 
@@ -25,6 +25,7 @@ export default function ScrollDownIcon() {
         &:before {
             position: absolute;
             left: 50%;
+            opacity: 0.4;
         }
         width: 25px;
         height: 40px;
@@ -39,10 +40,10 @@ export default function ScrollDownIcon() {
             width: 8px;
             height: 8px;
             background: #45b29a;
-            margin-left: -4px;
+            margin-left: -3px;
             top: 8px;
             border-radius: 4px;
-            animation: ${scroll} 1.5s infinite;
+            animation: ${scroll} 2.5s infinite;
             border-color: green;
         }
     `;

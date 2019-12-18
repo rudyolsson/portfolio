@@ -65,7 +65,7 @@ export default function ProjectSection({project}) {
     return (
         <Wrapper bgColor={bgColor}>
       <LazyLoad height={200}>
-      <ScrollAnimation animateIn="fadeIn" offset={50} duration={0.8} animateOnce={true} delay={0}>
+      <ScrollAnimation animateIn="fadeIn" offset={50} duration={1} animateOnce={true} delay={0}>
             <ScreenShot src={imgURL}/>
             </ScrollAnimation>
             </LazyLoad>

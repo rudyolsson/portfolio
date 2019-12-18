@@ -1,6 +1,6 @@
 import React from 'react'
 import Banner from 'components/Banner'
-import avatar from 'assets/images/avatar.png';
+import avatar from 'assets/images/ro.png';
 import flag from 'assets/images/flag.png';
 import SlideShow from 'components/SlideShow';
 import styled from 'styled-components';
@@ -52,7 +52,7 @@ export default function Home() {
 
     return (
         <>
-            <SectionTop className="one">
+            <SectionTop>
                 <Banner 
                     titleBlack="Hi, I'm" 
                     titleGreen="Rudy Olsson" 
@@ -60,7 +60,7 @@ export default function Home() {
                     btnText="View My Work">
                 </Banner>
             </SectionTop>
-            <Section className="two">
+            <Section className="forest">
                 <Flag  src={flag} alt="flag"/>
                 <Avatar src={avatar} alt="avatar"/>
                 <TitleSmall>About</TitleSmall>
