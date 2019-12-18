@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components';
 import FadeInUp from 'components/FadeInUp';
+import LazyLoad from 'react-lazyload';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const Wrapper = styled.section`
     padding: 70px 30px;
@@ -19,6 +21,10 @@ const ScreenShot = styled.img.attrs({
     @media (min-width: 768px) {
         max-height: 600px;
         max-width: 550px;
+  }
+  @media (min-width: 998px) {
+        max-height: 800px;
+        max-width: 700px;
   }
 `;
 
@@ -47,6 +53,8 @@ const Link = styled.a`
     display: block;
     max-width: 300px;
     text-transform: uppercase;
+    color: white;
+    text-decoration: none;
     &:hover {
         cursor: pointer;
     }
@@ -56,9 +64,11 @@ export default function ProjectSection({project}) {
     const { imgURL, bgColor, title, description, frontEnd, backEnd, siteURL, hideLink } = project;
     return (
         <Wrapper bgColor={bgColor}>
-            <FadeInUp component={
+      <LazyLoad height={200}>
+      <ScrollAnimation animateIn="fadeIn" offset={50} duration={0.8} animateOnce={true} delay={0}>
             <ScreenShot src={imgURL}/>
-            }/>
+            </ScrollAnimation>
+            </LazyLoad>
             <FadeInUp component={
             <Title>{title}</Title>
         }/>

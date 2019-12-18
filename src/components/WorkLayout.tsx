@@ -1,9 +1,9 @@
 import React from 'react';
 import ProjectSection from 'components/ProjectSection';
-import ArtysImg from 'assets/images/artys-screens.png';
-import UmatchImg from 'assets/images/umatch-three-screens.png';
-import FlexoImg from 'assets/images/flexo-three-screens.png';
-import TokenUIImg from 'assets/images/token-admin-ui.png';
+import ArtysImg from 'assets/images/artys-screens.webp';
+import UmatchImg from 'assets/images/umatch-three-screens.webp';
+import FlexoImg from 'assets/images/flexo-three-screens.webp';
+import TokenUIImg from 'assets/images/token-admin-ui.webp';
 import styled from 'styled-components';
 import FadeInUp from 'components/FadeInUp';
 import FancyButton from 'components/FancyButton/FancyButton';
@@ -11,19 +11,13 @@ import { MdMail } from 'react-icons/md';
 import ScrollDownIcon from './ScrollDownIcon';
 
 export default function WorkLayout() {
-    const backgroundColors: string[] = ['#7dcc93', '#f76160', '#31355b', '#f8c687', '#21364b'];
+    const backgroundColors: string[] = ['#1e836c', '#7dcc93', '#f76160', '#31355b', '#f8c687', '#21364b'];
     const Section = styled.section`
         padding: 30px 60px;
         text-align: center;
         position: relative;
     `;
 
-    const Avatar = styled.img`
-        height: 150px;
-        background-color: #f5f5f5;
-        border-radius: 50%;
-        padding: 5px;
-    `;
      const Paragraph = styled.p`
         max-width: 600px;
         margin: 0 auto;
@@ -49,7 +43,6 @@ export default function WorkLayout() {
 
     return (
         <>
-            {/* <Banner titleGreen="Work"></Banner> */}
             <Section>
                 <FadeInUp component={ <TitleSmall>What I've worked on recently</TitleSmall>}/>
                 <FadeInUp component={<Paragraph>Here are some projects that I have worked on recently. For more information visit the sites, or to see what personal projects I've been working on check out my <Anchor href="https://github.com/rudyolsson">GitHub.</Anchor></Paragraph>}/>
@@ -69,7 +62,7 @@ export default function WorkLayout() {
             <Section>
                 <TitleLarge>Let's Chat</TitleLarge>
                 <FadeInUp component={<Anchor href="mailto:rudy@gmail.com"><FancyButton><MdMail/> Message Me</FancyButton></Anchor>}/>
-                <FadeInUp component={<Paragraph>If you are interested if working together or just fancy saying hey, reach out.</Paragraph>}/>
+                <FadeInUp component={<Paragraph>If you are interested in working together or just fancy saying hey, reach out.</Paragraph>}/>
             </Section>
             
         </>

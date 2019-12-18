@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Header.scss';
 import signature from 'assets/images/signature.png';
 import signatureGreen from 'assets/images/signature-green.png';
-// import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Link } from 'react-scroll';
 
@@ -13,7 +12,6 @@ export default function Header() {
     const [activeClass, setActiveClass] = useState();
     const [activeClassSig, setActiveClassSig] = useState();
     const [scroll, setScroll ] = useState(0);
-    const prevScroll = usePrevious(scroll) || 0;
 
     useEffect(() => {
         window.addEventListener('scroll', (e) => {
@@ -25,20 +23,12 @@ export default function Header() {
          let activeClass = 'header-dark';
          let activeClassSig = 'show';
          if (scroll > 415) {
-            activeClass = 'header-light';
+            activeClass = 'header-light two';
             activeClassSig = 'hide';
          }
             setActiveClass(activeClass);
             setActiveClassSig(activeClassSig);
-     })
-
-    function usePrevious(value: any) {
-        const ref = useRef();
-        useEffect(() => {
-          ref.current = value;
-        }, [value]);
-        return ref.current;
-      }
+     }, [scroll])
 
     return (
         <StyledHeader className={`header ${activeClass}`}>
@@ -48,9 +38,9 @@ export default function Header() {
             </Link>
             <nav className="nav shift">
                 <NavUL>
-                  <Link to="home" spy={true} smooth={true} offset={430} duration={500} delay={200}><Anchor to="/">About</Anchor></Link>
-                  <Link to="work" spy={true} smooth={true} offset={-100} duration={500} delay={200}><Anchor to="/work">Work</Anchor></Link>
-                  <Link to="contact" spy={true} smooth={true} offset={50} duration={500} delay={200}><Anchor to="/work">Contact</Anchor></Link>
+                  <Link to="home" spy={true} smooth={true} offset={430} duration={500} delay={200}><Anchor >About</Anchor></Link>
+                  <Link to="work" spy={true} smooth={true} offset={-100} duration={500} delay={200}><Anchor>Work</Anchor></Link>
+                  <Link to="contact" spy={true} smooth={true} offset={50} duration={500} delay={200}><Anchor>Contact</Anchor></Link>
                 </NavUL>
             </nav>
         </StyledHeader>
@@ -90,14 +80,6 @@ const Signature = styled.img`
     }
 `;
 
-// .hide {
-//   opacity: 0;
-// }
-
-// .show {
-//   opacity: 1;
-// }
-
 const NavUL = styled.ul`
     list-style: none;
     text-align: center;
@@ -105,7 +87,7 @@ const NavUL = styled.ul`
     display: flex;
 `;
 
-const Anchor = styled.a`
+const Anchor = styled.span`
     display: block;
     padding: 5px;
     text-decoration: none;

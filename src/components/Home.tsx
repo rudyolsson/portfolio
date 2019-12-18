@@ -1,6 +1,7 @@
 import React from 'react'
 import Banner from 'components/Banner'
 import avatar from 'assets/images/avatar.png';
+import flag from 'assets/images/flag.png';
 import SlideShow from 'components/SlideShow';
 import styled from 'styled-components';
 import FadeInUp from './FadeInUp';
@@ -13,7 +14,7 @@ export default function Home() {
 
     const SectionTop = styled.section`
         padding-top: 60px;
-        padding-bottom: 30px;
+        padding-bottom: 0;
         text-align: center;
         `;
 
@@ -42,9 +43,16 @@ export default function Home() {
         line-height: 2em;
     `;
 
+    const Flag = styled.img`
+        height: 52px;
+        position: absolute;
+        left: 100px;
+        top: 204px;
+    `;
+
     return (
         <>
-            <SectionTop>
+            <SectionTop className="one">
                 <Banner 
                     titleBlack="Hi, I'm" 
                     titleGreen="Rudy Olsson" 
@@ -52,7 +60,8 @@ export default function Home() {
                     btnText="View My Work">
                 </Banner>
             </SectionTop>
-            <Section>
+            <Section className="two">
+                <Flag  src={flag} alt="flag"/>
                 <Avatar src={avatar} alt="avatar"/>
                 <TitleSmall>About</TitleSmall>
                 <FadeInUp component={<Paragraph>I am a Canadian Expat and full-stack JavaScript developer with a passion for creating great user experiences. I bring with me a sincere drive and ability to learn on-the-fly; I love a challenge.</Paragraph>}/>

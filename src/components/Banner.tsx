@@ -6,7 +6,7 @@ import { Link } from 'react-scroll';
 const Wrapper = styled.div`
     background-color: #e0ebe8;
     text-align:center;
-    height: 350px;
+    height: 250px;
     padding-top: 100px;
 `;
 
