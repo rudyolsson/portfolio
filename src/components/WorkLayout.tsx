@@ -60,7 +60,7 @@ export default function WorkLayout() {
             })}
             <Section>
                 <TitleLarge>Let's Chat</TitleLarge>
-                <FadeInUp component={<Anchor href="mailto:rudy@gmail.com"><FancyButton><MdMail/> Message Me</FancyButton></Anchor>}/>
+                <FadeInUp component={<Anchor href="mailto:rudyolsson@gmail.com"><FancyButton><MdMail/> Message Me</FancyButton></Anchor>}/>
                 <FadeInUp component={<Paragraph>If you are interested in working together or just fancy saying hey, reach out.</Paragraph>}/>
             </Section>
             

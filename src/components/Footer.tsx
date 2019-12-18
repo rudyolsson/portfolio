@@ -92,7 +92,7 @@ export default function Footer() {
                 delay={600}
                 component={ 
                     <NavItem>
-                        <Anchor href="mailto:rudy@gmail.com" target="_blank">                        
+                        <Anchor href="mailto:rudyolsson@gmail.com" target="_blank">                        
                             <MdEmail/>
                         </Anchor>
                     </NavItem>
