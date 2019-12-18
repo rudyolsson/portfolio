@@ -30,9 +30,12 @@
     height: 50px;
     transition: all .5s;
     cursor: pointer;
-    &-green {
+    &-green,
+    &-black {
       position: absolute;
       left: 32px;
+    }
+    &-green {
       opacity: 0;
     }
     &-black {

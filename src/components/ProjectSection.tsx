@@ -22,10 +22,6 @@ const ScreenShot = styled.img.attrs({
         max-height: 600px;
         max-width: 550px;
   }
-  @media (min-width: 998px) {
-        max-height: 800px;
-        max-width: 700px;
-  }
 `;
 
 const Title = styled.h1`

@@ -27,7 +27,7 @@ export default function ScrollDownIcon() {
             left: 50%;
             opacity: 0.4;
         }
-        width: 25px;
+        width: 23px;
         height: 40px;
         margin-left: -13px;
         top: 50%;
@@ -40,7 +40,7 @@ export default function ScrollDownIcon() {
             width: 8px;
             height: 8px;
             background: #45b29a;
-            margin-left: -3px;
+            margin-left: -4px;
             top: 8px;
             border-radius: 4px;
             animation: ${scroll} 2.5s infinite;

@@ -1,14 +1,15 @@
 import React from 'react';
 import ProjectSection from 'components/ProjectSection';
-import ArtysImg from 'assets/images/artys-screens.webp';
-import UmatchImg from 'assets/images/umatch-three-screens.webp';
-import FlexoImg from 'assets/images/flexo-three-screens.webp';
-import TokenUIImg from 'assets/images/token-admin-ui.webp';
+import ArtysImg from 'assets/images/artys-screens.png';
+import UmatchImg from 'assets/images/umatch-three-screens.png';
+import FlexoImg from 'assets/images/flexo-three-screens.png';
+import TokenUIImg from 'assets/images/token-admin-ui.png';
 import styled from 'styled-components';
 import FadeInUp from 'components/FadeInUp';
 import FancyButton from 'components/FancyButton/FancyButton';
 import { MdMail } from 'react-icons/md';
 import ScrollDownIcon from './ScrollDownIcon';
+import SlideShow from './SlideShow';
 
 export default function WorkLayout() {
     const backgroundColors: string[] = ['#1e836c', '#7dcc93', '#f76160', '#31355b', '#f8c687', '#21364b'];
@@ -24,12 +25,6 @@ export default function WorkLayout() {
         line-height: 2em;
  `;
 
-    const TitleSmall = styled.h5`
-        font-size: 2em;
-        color: #45b29a;
-        margin: 20px auto;
-    `;
-
     const TitleLarge = styled.h1`
         font-size: 3em;
         color: #1e836c;
@@ -44,7 +39,8 @@ export default function WorkLayout() {
     return (
         <>
             <Section>
-                <FadeInUp component={ <TitleSmall>What I've worked on recently</TitleSmall>}/>
+                <FadeInUp component={ <TitleLarge>Recent Work</TitleLarge>}/>
+                <SlideShow tiles={imageGroups}/>
                 <FadeInUp component={<Paragraph>Here are some projects that I have worked on recently. For more information visit the sites, or to see what personal projects I've been working on check out my <Anchor href="https://github.com/rudyolsson">GitHub.</Anchor></Paragraph>}/>
             </Section>
             <ScrollDownIcon />
@@ -104,4 +100,73 @@ const projects = [
         backEnd: "Back End: NestJS (Express), TypeORM, PostgreSQL, Docker",
         hideLink: true,
     },
+];
+
+export const imageGroups = [
+    [{
+        src: 'react.png',
+        name: 'ReactJS'
+    },
+    {
+        src: 'angular.png',
+        name: 'Angular'
+        
+    },
+    {
+        src: 'nodejs.png',
+        name: 'NodeJS',
+    },
+    {
+        src: 'html.png',
+        name: 'HTML'
+    },
+    {
+        src: 'css.png',
+        name: 'CSS'
+    }],
+    [{
+        src: 'redux.png',
+        name: 'Redux'
+    },
+    {
+        src: 'ngrx.png',
+        name: 'NgRx'
+    },
+    {
+        src: 'mobx.png',
+        name: 'Mobx',
+    },
+    {
+        src: 'nestjs.png',
+        name: 'NestJS'
+    },
+    {
+        src: 'mobx.png',
+        name: 'MobX'
+    }],
+    [{
+        src: 'javascript.png',
+        name: 'JavaScript'
+        
+    },
+    {
+        src: 'typescript.png',
+        name: 'TypeScript'
+    },
+    {
+        src: 'sass.png',
+        name: 'Sass',
+    },
+    {
+        src: 'postgres.png',
+        name: 'PostgreSQL'
+    },
+    {
+        src: 'docker.png',
+        name: 'Docker'
+    },
+    {
+        src: 'mongo.png',
+        name: 'MongoDB'
+    }], 
 ];
