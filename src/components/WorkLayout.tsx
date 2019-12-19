@@ -10,8 +10,9 @@ import FancyButton from 'components/FancyButton/FancyButton';
 import { MdMail } from 'react-icons/md';
 import ScrollDownIcon from './ScrollDownIcon';
 import SlideShow from './SlideShow';
+import { TechIcon, Project } from './types';
 
-export default function WorkLayout() {
+export default function WorkLayout(): JSX.Element {
     const backgroundColors: string[] = ['#1e836c', '#7dcc93', '#f76160', '#31355b', '#f8c687', '#21364b'];
     
     const Section = styled.section`
@@ -62,7 +63,7 @@ export default function WorkLayout() {
             })}
             <Section>
                 <TitleLarge>Let's Chat</TitleLarge>
-                <FadeInUp component={<Anchor href="mailto:rudyolsson@gmail.com"><FancyButton><MdMail/> Message Me</FancyButton></Anchor>}/>
+                <FadeInUp component={<Anchor href="mailto:rudyolsson.contact@gmail.com"><FancyButton><MdMail/> Message Me</FancyButton></Anchor>}/>
                 <FadeInUp component={<Paragraph>If you are interested in working together or just fancy saying hey, reach out.</Paragraph>}/>
             </Section>
             
@@ -71,7 +72,7 @@ export default function WorkLayout() {
 }
 
 
-const projects = [
+const projects: Project[] = [
     {
         imgURL: ArtysImg,
         title: "Artys Music Platform",
@@ -107,7 +108,7 @@ const projects = [
     },
 ];
 
-export const imageGroups = [
+export const imageGroups: TechIcon[][] = [
     [{
         src: 'react.png',
         name: 'ReactJS'

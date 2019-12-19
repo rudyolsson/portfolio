@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { HTMLAttributes } from 'react';
 import CircleSlide from 'components/CircleSlide/CircleSlide';
 import ScrollAnimation from 'react-animate-on-scroll';
 import styled from 'styled-components';
+import { TechIcon } from './types';
 
 const StyledDiv = styled.div`
   width: 100%;
@@ -14,10 +15,14 @@ const StyledDiv = styled.div`
   margin: 0 auto 20px auto;
 `;
 
-export default function SlideShow({tiles}:any) {
+interface Props extends HTMLAttributes<HTMLElement> { 
+    tiles: TechIcon[][]
+ }
+
+export default function SlideShow({tiles}: Props): JSX.Element {
     return (
             <StyledDiv>
-                { tiles.map( (tile: any, i: any) => {
+                { tiles.map( (tile: TechIcon[], i: any) => {
                     return (
                             <ScrollAnimation animateIn="fadeInUp" offset={50} animateOnce={true} delay={i * 200} key={i}>
                                 <CircleSlide images={tile} key={i} />

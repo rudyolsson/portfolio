@@ -5,7 +5,7 @@ import flag from 'assets/images/flag.png';
 import styled from 'styled-components';
 import FadeInUp from './FadeInUp';
 
-export default function Home() {
+export default function Home(): JSX.Element {
     const Section = styled.section`
         padding: 30px 60px;
         text-align: center;

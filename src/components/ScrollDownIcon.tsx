@@ -2,7 +2,7 @@ import React from 'react'
 import styled, { keyframes } from 'styled-components';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 
-export default function ScrollDownIcon() {
+export default function ScrollDownIcon(): JSX.Element {
 
     const bounce = keyframes`
         0%, 20%, 50%, 80%, 100% {

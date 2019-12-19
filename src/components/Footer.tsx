@@ -65,7 +65,7 @@ const ParagraphSmall = styled(Paragraph)`
 `;
 
 
-export default function Footer() {
+export default function Footer(): JSX.Element {
     return (
         <FadeInUp  component={ 
         <Wrapper>
@@ -92,7 +92,7 @@ export default function Footer() {
                 delay={600}
                 component={ 
                     <NavItem>
-                        <Anchor href="mailto:rudyolsson@gmail.com" target="_blank">                        
+                        <Anchor href="mailto:rudyolsson.contact@gmail.com" target="_blank">                        
                             <MdEmail/>
                         </Anchor>
                     </NavItem>

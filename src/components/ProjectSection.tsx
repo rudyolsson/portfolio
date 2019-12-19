@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { HTMLAttributes } from 'react'
 import styled from 'styled-components';
 import FadeInUp from 'components/FadeInUp';
 import LazyLoad from 'react-lazyload';
 import ScrollAnimation from 'react-animate-on-scroll';
+import { Project } from './types';
 
 const Wrapper = styled.section`
     padding: 70px 30px;
@@ -63,7 +64,11 @@ const Link = styled.a`
     }
 `;
 
-export default function ProjectSection({project}) {
+interface Props extends HTMLAttributes<HTMLElement> { 
+    project: Project;
+}
+
+export default function ProjectSection({project}: Props): JSX.Element {
     const { imgURL, bgColor, title, description, frontEnd, backEnd, siteURL, hideLink } = project;
     return (
         <Wrapper bgColor={bgColor}>

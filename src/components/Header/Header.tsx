@@ -5,10 +5,7 @@ import signatureGreen from 'assets/images/signature-green.png';
 import styled from 'styled-components';
 import { Link } from 'react-scroll';
 
-export default function Header() {
-
-
-   
+export default function Header(): JSX.Element {
     const [activeClass, setActiveClass] = useState();
     const [activeClassSig, setActiveClassSig] = useState();
     const [scroll, setScroll ] = useState(0);

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { HTMLAttributes } from 'react'
 import FancyButton from 'components/FancyButton/FancyButton';
 import styled from 'styled-components';
 import { Link } from 'react-scroll';
@@ -29,7 +29,14 @@ const Subtitle = styled.p`
     margin-top: 10px;
 `;
 
-export default function Banner({ titleGreen, subtitle, titleBlack, btnText }: any) {
+interface Props extends HTMLAttributes<HTMLElement> { 
+    titleGreen: string;
+    subtitle: string;
+    titleBlack: string;
+    btnText: string;
+}
+
+export default function Banner({ titleGreen, subtitle, titleBlack, btnText }: Props): JSX.Element {
     return (
         <Wrapper>
             <Title>
