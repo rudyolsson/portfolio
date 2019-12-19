@@ -6,7 +6,7 @@ import FadeInUp from './FadeInUp';
 
 const Wrapper = styled.div`
     padding: 30px;
-    background-color: #e0ebe8;
+    background-color: ${props => props.theme.lightGreen};
     color: #1e836c;
     height: 150px;
     display: flex;

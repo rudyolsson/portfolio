@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { Link } from 'react-scroll';
 
 const Wrapper = styled.div`
-    background-color: #e0ebe8;
+    background-color: ${props => props.theme.lightGreen};
     text-align:center;
     height: 250px;
     padding-top: 100px;
@@ -21,7 +21,7 @@ const TitleBlack = styled.span`
 `;
 
 const TitleGreen = styled.span`
-    color: #45b29a;
+    color: ${props => props.theme.mediumGreen};
 `;
 
 const Subtitle = styled.p`

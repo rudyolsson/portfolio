@@ -1,57 +1,40 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components';
+import { MdKeyboardArrowDown } from 'react-icons/md';
 
 export default function ScrollDownIcon() {
 
-    const scroll = keyframes`
-        from {
-            opacity: 1;
+    const bounce = keyframes`
+        0%, 20%, 50%, 80%, 100% {
+            transform: translateY(0);
         }
-
-        to {
-            opacity: 0;
-            transform: translateY(20px);
+        40% {
+            transform: translateY(-20px);
+        }
+        60% {
+            transform: translateY(-15px);
         }
     `;
 
     const Wrapper = styled.div`
         position: relative;
-        margin: 0 auto;
-        height: 70px;
+        margin: 20px auto 0 auto;
+        height: 50px;
     `;
 
     const Icon = styled.div`
-        &,
-        &:before {
-            position: absolute;
-            left: 50%;
-            opacity: 0.4;
-        }
-        width: 23px;
-        height: 40px;
-        margin-left: -13px;
-        top: 50%;
-        margin-top: -35px;
-        box-shadow: inset 0 0 0 1px #45b29a;
-        border-radius: 25px;
-        border-color: green;
-        &:before {
-            content: '';
-            width: 8px;
-            height: 8px;
-            background: #45b29a;
-            margin-left: -4px;
-            top: 8px;
-            border-radius: 4px;
-            animation: ${scroll} 2.5s infinite;
-            border-color: green;
-        }
+        text-align: center;
+        margin: 10px 0;
+        font-size: 2em;
+        color: ${props => props.theme.mediumGreen};
+        -moz-animation: ${bounce} 2s infinite;
+        -webkit-animation: ${bounce} 2s infinite;
+        animation: ${bounce} 2s infinite;
     `;
-
 
     return (
         <Wrapper>
-            <Icon/>
+            <Icon><MdKeyboardArrowDown/></Icon>
         </Wrapper>
     )
 }

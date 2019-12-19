@@ -19,11 +19,13 @@ export default function Home() {
 
     const Avatar = styled.img`
         height: 100px;
+        width: 100px;
         background-color: #f5f5f5;
         border-radius: 50%;
         padding: 5px;
         @media(min-width: 450px) {
             height: 150px;
+            width: 150px;
         }
     `;
 

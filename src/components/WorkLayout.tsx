@@ -13,6 +13,7 @@ import SlideShow from './SlideShow';
 
 export default function WorkLayout() {
     const backgroundColors: string[] = ['#1e836c', '#7dcc93', '#f76160', '#31355b', '#f8c687', '#21364b'];
+    
     const Section = styled.section`
         padding: 30px 60px;
         text-align: center;
@@ -27,7 +28,7 @@ export default function WorkLayout() {
 
     const TitleLarge = styled.h1`
         font-size: 2em;
-        color: #1e836c;
+        color: ${props => props.theme.darkGreen};
         margin: 20px auto;
         @media (min-width: 768px) {
         font-size: 3em;
