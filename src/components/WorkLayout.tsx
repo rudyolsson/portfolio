@@ -76,7 +76,7 @@ const projects: Project[] = [
     {
         imgURL: ArtysImg,
         title: "Artys Music Platform",
-        description: "Artys is a music platform and API to discover, vote on, and favourite music. User's can allocate their monthly subscription fee directly to artists with help from a secure blockchain who in turn can give percentages of the songs rights to .",
+        description: "Artys is a music platform and API to discover, vote on, and favourite music. User's can allocate their monthly subscription fee directly to artists with help from a secure blockchain who in turn can give percentages of the songs rights to group members or featured acts.",
         frontEnd: "Front End: Angular 8, MobX, RxJs",
         backEnd: "Back End: NextJS (Express), ObjectionJS, KnexJS, PostgreSQL, Docker",
         siteURL: "https://artys.io",
