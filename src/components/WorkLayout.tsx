@@ -78,7 +78,7 @@ const projects: Project[] = [
         title: "Artys Music Platform",
         description: "Artys is a music platform and API to discover, vote on, and favourite music. User's can allocate their monthly subscription fee directly to artists with help from a secure blockchain who in turn can give percentages of the songs rights to group members or featured acts.",
         frontEnd: "Front End: Angular 8, MobX, RxJs",
-        backEnd: "Back End: NextJS (Express), ObjectionJS, KnexJS, PostgreSQL, Docker",
+        backEnd: "Back End: NestJS (Express), ObjectionJS, KnexJS, PostgreSQL, Docker",
         siteURL: "https://artys.io",
 
     },
@@ -87,7 +87,7 @@ const projects: Project[] = [
         title: "UMatch Artist Platform and Admin UIs",
         description: "UIs and API for artists to upload and manage their music on Artys Music as well as a Shapr-like mechanism for collaborating and messaging with other artists.",
         frontEnd: "Front End: Angular 8, MobX, RxJs",
-        backEnd: "Back End: NextJS (Express), ObjectionJS, KnexJS, PostgreSQL, Docker",
+        backEnd: "Back End: NestJS (Express), ObjectionJS, KnexJS, PostgreSQL, Docker",
         siteURL: "https://umatch.io",
     },
     {
