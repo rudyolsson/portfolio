@@ -79,7 +79,8 @@ const projects: Project[] = [
         description: "Artys is a music platform and API to discover, vote on, and favourite music. User's can allocate their monthly subscription fee directly to artists with help from a secure blockchain who in turn can give percentages of the songs rights to group members or featured acts.",
         frontEnd: "Front End: Angular 8, MobX, RxJs",
         backEnd: "Back End: NestJS (Express), ObjectionJS, KnexJS, PostgreSQL, Docker",
-        siteURL: "https://artys.io",
+        // siteURL: "https://artys.io",
+        hideLink: true,
 
     },
     {
@@ -88,7 +89,8 @@ const projects: Project[] = [
         description: "UIs and API for artists to upload and manage their music on Artys Music as well as a Shapr-like mechanism for collaborating and messaging with other artists.",
         frontEnd: "Front End: Angular 8, MobX, RxJs",
         backEnd: "Back End: NestJS (Express), ObjectionJS, KnexJS, PostgreSQL, Docker",
-        siteURL: "https://umatch.io",
+        // siteURL: "https://umatch.io",
+        hideLink: true,
     },
     {
         imgURL: FlexoImg,
