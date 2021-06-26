@@ -18,7 +18,7 @@ const App: React.FC = () => {
 
   return (
     <>
-    <ThemeProvider theme={theme}>>
+    <ThemeProvider theme={theme}>
         <Header/>
         <Element id='home' name='home'>
           <Home/>

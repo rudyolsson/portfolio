@@ -4,17 +4,18 @@ import ArtysImg from 'assets/images/artys-screens.png';
 import UmatchImg from 'assets/images/umatch-three-screens.png';
 import FlexoImg from 'assets/images/flexo-three-screens.png';
 import TokenUIImg from 'assets/images/token-admin-ui.png';
+import HIImage from 'assets/images/hotel-insights.png';
+import CapGImage from 'assets/images/capital-g.png';
 import styled from 'styled-components';
 import FadeInUp from 'components/FadeInUp';
 import FancyButton from 'components/FancyButton/FancyButton';
 import { MdMail } from 'react-icons/md';
 import ScrollDownIcon from './ScrollDownIcon';
-import SlideShow from './SlideShow';
 import { TechIcon, Project } from './types';
 
 export default function WorkLayout(): JSX.Element {
     const backgroundColors: string[] = ['#1e836c', '#7dcc93', '#f76160', '#31355b', '#f8c687', '#21364b'];
-    
+
     const Section = styled.section`
         padding: 30px 60px;
         text-align: center;
@@ -46,7 +47,6 @@ export default function WorkLayout(): JSX.Element {
         <>
             <Section>
                 <FadeInUp component={ <TitleLarge>Recent Work</TitleLarge>}/>
-                <SlideShow tiles={imageGroups}/>
                 <FadeInUp component={<Paragraph>Here are some projects that I have worked on recently. For more information visit the sites, or to see what personal projects I've been working on check out my <Anchor href="https://github.com/rudyolsson">GitHub.</Anchor></Paragraph>}/>
             </Section>
             <FadeInUp component={<ScrollDownIcon />}/>
@@ -54,7 +54,7 @@ export default function WorkLayout(): JSX.Element {
             { projects.map((project, i) => {
                 return (
                     <ProjectSection project={{
-                        ...project, 
+                        ...project,
                         bgColor: backgroundColors[i],
                     }}
                     key={project.title}
@@ -66,13 +66,32 @@ export default function WorkLayout(): JSX.Element {
                 <FadeInUp component={<Anchor href="mailto:rudyolsson.contact@gmail.com"><FancyButton><MdMail/> Message Me</FancyButton></Anchor>}/>
                 <FadeInUp component={<Paragraph>If you are interested in working together or just fancy saying hey, reach out.</Paragraph>}/>
             </Section>
-            
         </>
     )
 }
 
 
 const projects: Project[] = [
+    {
+        imgURL: HIImage,
+        title: "Hotel Insights with Google",
+        description: "Hotel Insights uses hotel search data to help small and independent hoteliers determine where to target their marketing efforts.",
+        frontEnd: "Front End: Angular 11, NgRx, RxJs",
+        backEnd: "",
+        siteURL: "https://hotelinsights.withgoogle.com/intl/en/",
+        hideLink: false,
+
+    },
+    {
+        imgURL: CapGImage,
+        title: "CapitalG",
+        description: "CapitalG is Alphabet’s independent growth fund. Their portfolio includes companies like AirBnB, Lyft, and Stripe.",
+        frontEnd: "Front End: Angular 10, RxJs",
+        backEnd: "",
+        siteURL: "https://capitalg.com/",
+        hideLink: false,
+
+    },
     {
         imgURL: ArtysImg,
         title: "Artys Music Platform",
@@ -84,7 +103,7 @@ const projects: Project[] = [
 
     },
     {
-        imgURL: UmatchImg, 
+        imgURL: UmatchImg,
         title: "UMatch Artist Platform and Admin UIs",
         description: "UIs and API for artists to upload and manage their music on Artys Music as well as a Shapr-like mechanism for collaborating and messaging with other artists.",
         frontEnd: "Front End: Angular 8, MobX, RxJs",
@@ -101,7 +120,7 @@ const projects: Project[] = [
         hideLink: true,
     },
     {
-        imgURL: TokenUIImg, 
+        imgURL: TokenUIImg,
         title: "Token Investment Platform",
         description: "API and UI's for administrators and users to buy and sell tokenized resources as well as monitor resources saved to the blockchain.",
         frontEnd: "Front End: Angular 8, NgRx, RxJS",
@@ -118,7 +137,6 @@ export const imageGroups: TechIcon[][] = [
     {
         src: 'angular.png',
         name: 'Angular'
-        
     },
     {
         src: 'nodejs.png',
@@ -155,7 +173,6 @@ export const imageGroups: TechIcon[][] = [
     [{
         src: 'javascript.png',
         name: 'JavaScript'
-        
     },
     {
         src: 'typescript.png',
@@ -176,5 +193,5 @@ export const imageGroups: TechIcon[][] = [
     {
         src: 'mongo.png',
         name: 'MongoDB'
-    }], 
+    }],
 ];
