@@ -6,8 +6,8 @@ import styled from 'styled-components';
 import { Link } from 'react-scroll';
 
 export default function Header(): JSX.Element {
-    const [activeClass, setActiveClass] = useState();
-    const [activeClassSig, setActiveClassSig] = useState();
+    const [activeClass, setActiveClass] = useState('header-dark');
+    const [activeClassSig, setActiveClassSig] = useState('show');
     const [scroll, setScroll ] = useState(0);
 
     useEffect(() => {
@@ -35,9 +35,15 @@ export default function Header(): JSX.Element {
             </Link>
             <nav className="nav shift">
                 <NavUL>
-                  <Link to="home" spy={true} smooth={true} offset={430} duration={500} delay={200}><Anchor >About</Anchor></Link>
-                  <Link to="work" spy={true} smooth={true} offset={-100} duration={500} delay={200}><Anchor>Work</Anchor></Link>
-                  <Link to="contact" spy={true} smooth={true} offset={50} duration={500} delay={200}><Anchor>Contact</Anchor></Link>
+                  <li>
+                    <Link to="home" spy={true} smooth={true} offset={430} duration={500} delay={200}><Anchor aria-label="Click to scroll to About section">About</Anchor></Link>
+                  </li>
+                  <li>
+                    <Link to="work" spy={true} smooth={true} offset={-100} duration={500} delay={200}><Anchor aria-label="Click to scroll to Work section">Work</Anchor></Link>
+                  </li>
+                  <li>
+                    <Link to="contact" spy={true} smooth={true} offset={50} duration={500} delay={200}><Anchor aria-label="Click to scroll to Contact section">Contact</Anchor></Link>
+                  </li>
                 </NavUL>
             </nav>
         </StyledHeader>
@@ -45,7 +51,7 @@ export default function Header(): JSX.Element {
 }
 
 const StyledHeader = styled.header`
-    position: fixed; 
+    position: fixed;
     top: 0;
     transition: all .6s;
     width: 100%;
@@ -117,14 +123,13 @@ const Anchor = styled.span`
       margin: 0 10px;
     }
   }
-  
+
   &:hover::after {
-    transition-timing-function: cubic-bezier(.19, 1, .22, 1);  
+    transition-timing-function: cubic-bezier(.19, 1, .22, 1);
     transform: scaleX(1);
   }
   &:hover {
-    cursor: pointer; 
+    cursor: pointer;
   }
 `;
-  
- 
+

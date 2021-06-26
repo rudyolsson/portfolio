@@ -1,7 +1,7 @@
 import React, { HTMLAttributes } from 'react'
 import ScrollAnimation from 'react-animate-on-scroll';
 
-interface Props extends HTMLAttributes<HTMLElement> { 
+interface Props extends HTMLAttributes<HTMLElement> {
     component: JSX.Element;
     delay?: number;
 }

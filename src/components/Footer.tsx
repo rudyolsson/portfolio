@@ -35,7 +35,7 @@ const Anchor = styled.a`
     text-decoration: none;
     position: relative;
     color: inherit;
-  
+
   &::after {
     position: absolute;
     content: "";
@@ -48,9 +48,9 @@ const Anchor = styled.a`
     transform: scaleX(0);
     transition: transform .5s cubic-bezier(.95, .05, .795, .035);
    }
-  
+
    &:hover::after {
-    transition-timing-function: cubic-bezier(.19, 1, .22, 1);  
+    transition-timing-function: cubic-bezier(.19, 1, .22, 1);
     transform: scaleX(1);
    }
 `;
@@ -67,32 +67,32 @@ const ParagraphSmall = styled(Paragraph)`
 
 export default function Footer(): JSX.Element {
     return (
-        <FadeInUp  component={ 
+        <FadeInUp  component={
         <Wrapper>
             <FooterNav>
-                <FadeInUp  
+                <FadeInUp
                 delay={200}
-                component={ 
+                component={
                     <NavItem>
-                        <Anchor href="https://www.linkedin.com/in/rudy-olsson-bb2152161/" target="_blank">                        
+                        <Anchor href="https://www.linkedin.com/in/rudy-olsson-bb2152161/" target="_blank" aria-label="Click to open LinkedIn a new window">
                             <FaLinkedin/>
                         </Anchor>
                     </NavItem>
                 }/>
-                <FadeInUp  
+                <FadeInUp
                 delay={400}
-                component={ 
+                component={
                     <NavItem>
-                        <Anchor href="https://github.com/rudyolsson" target="_blank">                        
+                        <Anchor href="https://github.com/rudyolsson" target="_blank" aria-label="Click to open GitHub a new window">
                             <FaGithub/>
                         </Anchor>
                     </NavItem>
                 }/>
-                <FadeInUp  
+                <FadeInUp
                 delay={600}
-                component={ 
+                component={
                     <NavItem>
-                        <Anchor href="mailto:rudyolsson.contact@gmail.com" target="_blank">                        
+                        <Anchor href="mailto:rudyolsson.contact@gmail.com" target="_blank" aria-label="Click to open your email client a new window">
                             <MdEmail/>
                         </Anchor>
                     </NavItem>

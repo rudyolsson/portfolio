@@ -29,7 +29,7 @@ export default function Home(): JSX.Element {
         }
     `;
 
-    const TitleSmall = styled.h5`
+    const TitleSmall = styled.h2`
         font-size: 2em;
         color: #45b29a;
         margin: 20px auto;
@@ -54,10 +54,10 @@ export default function Home(): JSX.Element {
     return (
         <>
             <SectionTop>
-                <Banner 
-                    titleBlack="Hi, I'm" 
-                    titleGreen="Rudy Olsson" 
-                    subtitle="Web Developer" 
+                <Banner
+                    titleBlack="Hi, I'm"
+                    titleGreen="Rudy Olsson"
+                    subtitle="Web Developer"
                     btnText="View My Work">
                 </Banner>
             </SectionTop>

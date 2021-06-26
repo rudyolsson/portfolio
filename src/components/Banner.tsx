@@ -21,7 +21,7 @@ const TitleBlack = styled.span`
 `;
 
 const TitleGreen = styled.span`
-    color: ${props => props.theme.mediumGreen};
+    color: ${props => props.theme.darkGreen};
 `;
 
 const Subtitle = styled.p`
@@ -29,7 +29,7 @@ const Subtitle = styled.p`
     margin-top: 10px;
 `;
 
-interface Props extends HTMLAttributes<HTMLElement> { 
+interface Props extends HTMLAttributes<HTMLElement> {
     titleGreen: string;
     subtitle: string;
     titleBlack: string;
@@ -40,7 +40,7 @@ export default function Banner({ titleGreen, subtitle, titleBlack, btnText }: Pr
     return (
         <Wrapper>
             <Title>
-                <TitleBlack>{titleBlack}</TitleBlack> 
+                <TitleBlack>{titleBlack}</TitleBlack>
                 <TitleGreen>{titleGreen}</TitleGreen>
             </Title>
             <Subtitle>{subtitle}</Subtitle>
