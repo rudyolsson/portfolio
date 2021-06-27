@@ -6,6 +6,7 @@ import FlexoImg from 'assets/images/flexo-three-screens.png';
 import TokenUIImg from 'assets/images/token-admin-ui.png';
 import HIImage from 'assets/images/hotel-insights.png';
 import CapGImage from 'assets/images/capital-g.png';
+import GMSImage from 'assets/images/gms.png';
 import styled from 'styled-components';
 import FadeInUp from 'components/FadeInUp';
 import FancyButton from 'components/FancyButton/FancyButton';
@@ -42,7 +43,6 @@ export default function WorkLayout(): JSX.Element {
         color: ${props => props.theme.darkGreen};
     `;
 
-
     return (
         <>
             <Section>
@@ -55,7 +55,7 @@ export default function WorkLayout(): JSX.Element {
                 return (
                     <ProjectSection project={{
                         ...project,
-                        bgColor: backgroundColors[i],
+                        bgColor: backgroundColors[i] || backgroundColors[i - (backgroundColors.length)],
                     }}
                     key={project.title}
                     />
@@ -64,7 +64,7 @@ export default function WorkLayout(): JSX.Element {
             <Section>
                 <TitleLarge>Let's Chat</TitleLarge>
                 <FadeInUp component={<Anchor href="mailto:rudyolsson.contact@gmail.com"><FancyButton><MdMail/> Message Me</FancyButton></Anchor>}/>
-                <FadeInUp component={<Paragraph>If you are interested in working together or just fancy saying hey, reach out.</Paragraph>}/>
+                <FadeInUp component={<Paragraph>If you are interested in working together or just feel like saying hey, reach out.</Paragraph>}/>
             </Section>
         </>
     )
@@ -76,7 +76,7 @@ const projects: Project[] = [
         imgURL: HIImage,
         title: "Hotel Insights with Google",
         description: "Hotel Insights uses hotel search data to help small and independent hoteliers determine where to target their marketing efforts.",
-        frontEnd: "Front End: Angular 11, NgRx, RxJs",
+        frontEnd: "Front End: Angular 11, NgRx (Redux), RxJs",
         backEnd: "",
         siteURL: "https://hotelinsights.withgoogle.com/intl/en/",
         hideLink: false,
@@ -89,6 +89,16 @@ const projects: Project[] = [
         frontEnd: "Front End: Angular 10, RxJs",
         backEnd: "",
         siteURL: "https://capitalg.com/",
+        hideLink: false,
+
+    },
+    {
+        imgURL: GMSImage,
+        title: "Grow My Store with Google",
+        description: "Grow My Store performs an assessment of online shops and creates a report offering recommendations for shop owners to improve the customers' shopping experience and accelerate the development of their business.",
+        frontEnd: "Front End: Angular 10, NgRx (Redux), RxJs",
+        backEnd: "",
+        siteURL: "https://growmystore.thinkwithgoogle.com/",
         hideLink: false,
 
     },
